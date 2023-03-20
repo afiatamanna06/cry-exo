@@ -9,11 +9,11 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import Link from "next/link";
-//import { useAccount, useDisconnect, useEnsName, useBalance } from "wagmi";
+import { useAccount, useDisconnect, useEnsName, useBalance } from "wagmi";
 
 function NavigationBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  /*const { address, connector, isConnected } = useAccount();
+  const { address, connector, isConnected } = useAccount();
     const { data: ensName } = useEnsName({ address });
     const { disconnect } = useDisconnect();
     const {
@@ -26,12 +26,12 @@ function NavigationBar() {
           ? `${address}`
           : address,
     });
-    console.log(Balance);*/
+    console.log(Balance);
 
   return (
     <Flex
       justify="space-between"
-      fontFamily="'IBM Plex Mono', monospace"
+      fontFamily="'Catamaran', sans-serif"
       borderBottom="1px"
       borderColor="rgba(168, 162, 158, 1)"
       bg="rgba(245, 245, 245, 1)"
@@ -41,7 +41,7 @@ function NavigationBar() {
       px={["6", "6", "8", "8"]}
     >
       <Link href="/" passHref>
-        <Box>CryExo</Box>
+        <Box fontWeight="bold" fontSize={["xl"]}>CryExo</Box>
       </Link>
       <Box>
         {/*{isConnected ? (
