@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { useAccount, useDisconnect, useEnsName, useBalance } from "wagmi";
+import CommonButton from "../common/CommonButton";
 
 function NavigationBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -42,7 +43,7 @@ function NavigationBar() {
         <Box fontWeight="bold" fontSize={["xl"]} color="#3D445C">CryExo</Box>
       </Link>
       <Box>
-        {/*{isConnected ? (
+        {isConnected ? (
             <Flex alignItems="center" gap={[2, 2, 3, 3]}>
               <Box fontWeight="semibold" fontSize={["xs", "xs", "sm", "md"]}>
                 {isLoading && <Box>Fetching balance…</Box>}
@@ -89,12 +90,12 @@ function NavigationBar() {
               <CommonButton
                 name="Connect your wallet"
                 onClick={onOpen}
-                bg="rgba(187, 247, 208, 1)"
-                hoverBg="rgba(74, 222, 128, 1)"
+                bg="rgba(202, 195, 220, .6)"
+                hoverBg="#9CA7C3"
               />
               
             </Flex>
-          )}*/}
+          )}
       </Box>
     </Flex>
   );
