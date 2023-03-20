@@ -32,16 +32,14 @@ function NavigationBar() {
     <Flex
       justify="space-between"
       fontFamily="'Catamaran', sans-serif"
-      borderBottom="1px"
-      borderColor="rgba(168, 162, 158, 1)"
-      bg="rgba(245, 245, 245, 1)"
+      bg="rgba(255, 255, 255, 1)"
       alignItems="center"
       w="full"
       py={["4"]}
       px={["6", "6", "8", "8"]}
     >
       <Link href="/" passHref>
-        <Box fontWeight="bold" fontSize={["xl"]}>CryExo</Box>
+        <Box fontWeight="bold" fontSize={["xl"]} color="#3D445C">CryExo</Box>
       </Link>
       <Box>
         {/*{isConnected ? (
