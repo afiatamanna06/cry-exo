@@ -33,14 +33,14 @@ function NavigationBar() {
     <Flex
       justify="space-between"
       fontFamily="'Catamaran', sans-serif"
-      bg="rgba(255, 255, 255, 1)"
+      bg="rgba(205, 191, 178, .1)"
       alignItems="center"
       w="full"
       py={["4"]}
-      px={["6", "6", "8", "8"]}
+      px={["4", "4", "8", "8"]}
     >
       <Link href="/" passHref>
-        <Box fontWeight="bold" fontSize={["xl"]} color="#3D445C">CryExo</Box>
+        <Box fontWeight="extrabold" fontSize={["2xl"]} color="rgba(33, 68, 84, 1)">CryExo</Box>
       </Link>
       <Box>
         {isConnected ? (
@@ -90,8 +90,7 @@ function NavigationBar() {
               <CommonButton
                 name="Connect your wallet"
                 onClick={onOpen}
-                bg="rgba(202, 195, 220, .6)"
-                hoverBg="#9CA7C3"
+                bg="rgba(0, 233, 223, 1)"
               />
               
             </Flex>

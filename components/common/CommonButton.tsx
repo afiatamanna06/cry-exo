@@ -4,18 +4,20 @@ interface propTypes {
     name: string;
     onClick?: any;
     bg?: string;
+    bgGradient?: string;
     image?: string;
     hoverBg?: string;
 }
 
-function CommonButton({ name, onClick, bg, hoverBg, image }: propTypes) {
+function CommonButton({ name, onClick, bg, bgGradient, hoverBg, image }: propTypes) {
   return (
     <Button
       fontFamily="'Catamaran', sans-serif"
-      fontWeight="medium"
+      fontWeight="semibold"
       rounded={"3px"}
       bg={bg}
-      color="#3D445C"
+      bgGradient={bgGradient}
+      color="white"
       display="flex"
       flexDir="row"
       alignItems="center"

@@ -12,7 +12,7 @@ export default function Home() {
       <CacheProvider>
         <ChakraProvider>
           <WagmiConfig client={client}>
-            <Box bg="rgb(243, 240, 249)" minH="100vh">
+            <Box bg="white" minH="100vh">
               <NavigationBar />
             </Box>
           </WagmiConfig>
