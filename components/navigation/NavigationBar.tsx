@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import { useAccount, useDisconnect, useEnsName, useBalance } from "wagmi";
 import CommonButton from "../common/CommonButton";
+import ConnectorModal from "./ConnectorModal";
 
 function NavigationBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -73,8 +74,7 @@ function NavigationBar() {
                               address.length
                             )}`
                       }
-                      bg="white"
-                      hoverBg="rgba(245, 245, 245, 1)"
+                      bg="rgba(0, 233, 223, 1)"
                     />
                   </MenuButton>
                   <MenuList borderRadius="sm" border="1px">
@@ -92,7 +92,7 @@ function NavigationBar() {
                 onClick={onOpen}
                 bg="rgba(0, 233, 223, 1)"
               />
-              
+              <ConnectorModal isModalOpen={isOpen} onModalClose={onClose} />
             </Flex>
           )}
       </Box>
