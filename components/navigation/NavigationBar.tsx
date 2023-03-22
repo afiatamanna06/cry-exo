@@ -34,7 +34,7 @@ function NavigationBar() {
     <Flex
       justify="space-between"
       fontFamily="'Catamaran', sans-serif"
-      bg="rgba(205, 191, 178, .1)"
+      bg="rgba(0, 233, 223, .05)"
       alignItems="center"
       w="full"
       py={["4"]}
