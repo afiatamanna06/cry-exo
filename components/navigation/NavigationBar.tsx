@@ -77,8 +77,8 @@ function NavigationBar() {
                       bg="rgba(0, 233, 223, 1)"
                     />
                   </MenuButton>
-                  <MenuList borderRadius="sm" border="1px">
-                    <MenuItem fontSize="sm" onClick={() => disconnect()}>
+                  <MenuList borderRadius="8px">
+                    <MenuItem fontSize="md" onClick={() => disconnect()}>
                       disconnect
                     </MenuItem>
                   </MenuList>

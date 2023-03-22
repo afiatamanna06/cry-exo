@@ -47,32 +47,31 @@ function ConnectorModal({ isModalOpen, onModalClose }: modalProps) {
           <Flex
             direction="column"
             pt="9"
-            gap={5}
+            gap={3}
             onMouseMove={isSuccess ? onModalClose : () => console.log("")}
           >
-            <Box textAlign="center" fontWeight="semibold" fontSize="lg">
+            <Box textAlign="center" fontWeight="semibold" fontSize="lg" mb="2">
               Connect a wallet from below to continue
             </Box>
             {connectors.map((connector) =>
               images.map((image) => (
-                <Button
+                <Box
                   display={image.name === connector.name ? "flex" : "none"}
                   flexDir="row"
                   gap={2}
-                  py="6"
+                  py="4"
+                  px="4"
+                  cursor="pointer"
                   alignItems="center"
-                  disabled={!connector.ready}
                   key={connector.id}
                   fontWeight="semibold"
                   rounded={"5px"}
-                  bg="rgba(0, 233, 223, 1)"
-                  color="white"
                   fontSize={["sm", "md", "md", "md"]}
                   _hover={{
-                    bg: "rgba(0, 233, 223, .7)",
+                    bg: "rgba(0, 0, 0, .05)",
                   }}
                   _active={{
-                    bg: "rgba(0, 233, 223, .7)",
+                    opacity: ".9",
                   }}
                   onClick={() => connect({ connector })}
                 >
@@ -90,7 +89,7 @@ function ConnectorModal({ isModalOpen, onModalClose }: modalProps) {
                       connector.id === pendingConnector?.id &&
                       " (connecting)"}
                   </Box>
-                </Button>
+                </Box>
               ))
             )}
 
