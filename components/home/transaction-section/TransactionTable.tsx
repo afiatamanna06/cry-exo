@@ -9,7 +9,7 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/react";
-//import { dealsTableData } from "./DealsTableData";
+import { transactionTableDummyData } from "./TransactionTableData";
 
 function TransactionTable() {
   return (
@@ -35,11 +35,11 @@ function TransactionTable() {
           </Tr>
         </Thead>
         <Tbody>
-          {/*{dealsTableData.map(({ name, principal, fee, region, assets }) => (
-              <Tr key={name} cursor="pointer" fontSize="sm" fontWeight="medium" _hover={{ bg: "white" }}>
-                <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">{name}</Td>
-                <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">{principal}</Td>
-                <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">{fee}</Td>
+          {transactionTableDummyData.map(({ date, description, amount, currencyType, transactionType }) => (
+              <Tr key={date} cursor="pointer" fontSize="sm" fontWeight="medium" _hover={{ bg: "white" }}>
+                <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">{date}</Td>
+                <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">{description}</Td>
+                <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">{amount}</Td>
                 <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">
                   <Box
                     color="rgba(234, 88, 12, 1)"
@@ -49,7 +49,7 @@ function TransactionTable() {
                     w="min-content"
                     bg="rgba(255, 247, 237, 1)"
                   >
-                    {region}
+                    {currencyType}
                   </Box>
                 </Td>
                 <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">
@@ -61,11 +61,11 @@ function TransactionTable() {
                     w="min-content"
                     bg="rgba(222, 212, 212, 1)"
                   >
-                    {assets}
+                    {transactionType}
                   </Box>
                 </Td>
               </Tr>
-            ))}*/}
+            ))}
         </Tbody>
       </Table>
     </TableContainer>
