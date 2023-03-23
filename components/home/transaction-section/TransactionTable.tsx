@@ -13,7 +13,7 @@ import { transactionTableDummyData } from "./TransactionTableData";
 
 function TransactionTable() {
   return (
-    <TableContainer overflowX="auto">
+    <TableContainer w={["21rem", "21rem", "45rem", "60rem", "80rem"]} overflowX="scroll">
       <Table
         variant="unstyled"
         size={["sm", "sm", "sm", "md"]}
@@ -42,24 +42,24 @@ function TransactionTable() {
                 <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">{amount}</Td>
                 <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">
                   <Box
-                    color="rgba(234, 88, 12, 1)"
+                    color="rgba(0, 233, 223, 1)"
                     py="1"
                     px="2"
-                    borderRadius="lg"
+                    borderRadius="md"
                     w="min-content"
-                    bg="rgba(255, 247, 237, 1)"
+                    bg="rgba(0, 233, 223, .075)"
                   >
                     {currencyType}
                   </Box>
                 </Td>
                 <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">
                   <Box
-                    color="rgba(127, 29, 29, 1)"
+                    color="rgba(33, 68, 84, 1)"
                     py="1"
                     px="2"
-                    borderRadius="lg"
+                    borderRadius="md"
                     w="min-content"
-                    bg="rgba(222, 212, 212, 1)"
+                    bg="rgba(33, 68, 84, .075)"
                   >
                     {transactionType}
                   </Box>

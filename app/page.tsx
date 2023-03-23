@@ -1,5 +1,6 @@
 "use client";
 
+import TransactionTableSection from "@/components/home/transaction-section/TransactionTableSection";
 import NavigationBar from "@/components/navigation/NavigationBar";
 import { CacheProvider } from "@chakra-ui/next-js";
 import { Box, ChakraProvider } from "@chakra-ui/react";
@@ -12,8 +13,9 @@ export default function Home() {
       <CacheProvider>
         <ChakraProvider>
           <WagmiConfig client={client}>
-            <Box bg="rgba(205, 191, 178, .1)" minH="100vh">
+            <Box bg="rgba(205, 191, 178, .1)" overflow="hidden" minH="100vh">
               <NavigationBar />
+              <TransactionTableSection />
             </Box>
           </WagmiConfig>
         </ChakraProvider>
