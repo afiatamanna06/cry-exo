@@ -1,5 +1,6 @@
 import CommonButton from "@/components/common/CommonButton";
 import { Box, Center, Flex, useDisclosure } from "@chakra-ui/react";
+import DepositModal from "./DepositModal";
 
 function DepositSection() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -11,8 +12,8 @@ function DepositSection() {
       w={["full"]}
       direction="column"
       fontFamily="'Catamaran', sans-serif"
-      mb="16"
-      mt={[14, 14, 0, 0]}
+      mb="8"
+      mt={[4, 4, 0, 0]}
     >
       <Center>
         <Flex
@@ -40,6 +41,7 @@ function DepositSection() {
             onClick={onOpen}
             bg="rgba(0, 233, 223, 1)"
           />
+          <DepositModal isModalOpen={isOpen} onModalClose={onClose} />
         </Flex>
       </Center>
     </Flex>
