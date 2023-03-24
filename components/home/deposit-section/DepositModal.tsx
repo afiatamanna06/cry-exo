@@ -1,3 +1,4 @@
+import amountAtom, { AmountAtom } from "@/atoms/amountAtom";
 import CommonButton from "@/components/common/CommonButton";
 import {
   Box,
@@ -12,7 +13,14 @@ import {
   ModalOverlay,
   Select,
   Input,
+  NumberInput,
+  NumberInputStepper,
+  NumberInputField,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
 } from "@chakra-ui/react";
+import { useAtom } from "jotai";
+import { useState } from "react";
 
 interface modalProps {
   isModalOpen: boolean;
@@ -20,6 +28,16 @@ interface modalProps {
 }
 
 const DepositModal = ({ isModalOpen, onModalClose }: modalProps) => {
+  const [amount, setAmount] = useAtom(amountAtom);
+  const [value, setValue] = useState(0);
+
+  const deposit = () => {
+    let numberValue: AmountAtom = {
+      selectAmount: value,
+    };
+    setAmount(numberValue);
+  };
+
   return (
     <Modal isOpen={isModalOpen} onClose={onModalClose} isCentered>
       <ModalOverlay />
@@ -32,7 +50,7 @@ const DepositModal = ({ isModalOpen, onModalClose }: modalProps) => {
                 Currency
               </Box>
               <Select placeholder="Select currency">
-                {["ETH", "USDC"].map((item) => (
+                {["ETH"].map((item) => (
                   <option key={item} value={item}>
                     {item}
                   </option>
@@ -43,13 +61,33 @@ const DepositModal = ({ isModalOpen, onModalClose }: modalProps) => {
               <Box fontWeight="semibold" fontSize="md">
                 Amount
               </Box>
-              <Input placeholder="Amount" type="number" />
+              <NumberInput
+                placeholder="Amount"
+                value={value}
+                onChange={(e) => {
+                  setValue(Number(e));
+                }}
+                precision={2}
+                step={0.1}
+                min={0}
+                max={30}
+              >
+                <NumberInputField />
+                <NumberInputStepper>
+                  <NumberIncrementStepper />
+                  <NumberDecrementStepper />
+                </NumberInputStepper>
+              </NumberInput>
             </Flex>
           </Flex>
         </ModalBody>
 
         <ModalFooter>
-          <CommonButton name="Deposit" bg="rgba(0, 233, 223, 1)" />
+          <CommonButton
+            name="Deposit"
+            onClick={deposit}
+            bg="rgba(0, 233, 223, 1)"
+          />
           <Button
             bg="black"
             color="white"

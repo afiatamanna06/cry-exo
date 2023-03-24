@@ -23,15 +23,15 @@ export const transactionTableDummyData = [
     {
       date: "October 13, 2022",
       description: "lorem ipsum",
-      amount: 11936,
-      currencyType: "USDC",
+      amount: 23.000000,
+      currencyType: "MATIC",
       transactionType: "Debit",
     },
     {
       date: "June 23, 2022",
       description: "lorem ipsum",
-      amount: 5000,
-      currencyType: "USDC",
+      amount: 12.000000,
+      currencyType: "MATIC",
       transactionType: "Credit",
     },
     {
