@@ -64,8 +64,8 @@ function NavigationBar() {
                   Your balance:{" "}
                 </Box>
                 <Box>
-                  {amount?.selectAmount
-                    ? `${Number(Balance?.formatted) + amount?.selectAmount} ${
+                  {amount
+                    ? `${Number(Balance?.formatted) + amount} ${
                         Balance?.symbol
                       }`
                     : `${Balance?.formatted} ${Balance?.symbol}`}

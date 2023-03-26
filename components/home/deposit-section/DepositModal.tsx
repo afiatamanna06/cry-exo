@@ -32,10 +32,13 @@ const DepositModal = ({ isModalOpen, onModalClose }: modalProps) => {
   const [value, setValue] = useState(0);
 
   const deposit = () => {
-    let numberValue: AmountAtom = {
-      selectAmount: value,
-    };
-    setAmount(numberValue);
+    if (amount !== null) {
+      setValue(value + amount);
+      setAmount(value + amount);
+    } else {
+      let numberValue: AmountAtom = value;
+      setAmount(numberValue);
+    }
   };
 
   return (
@@ -63,7 +66,6 @@ const DepositModal = ({ isModalOpen, onModalClose }: modalProps) => {
               </Box>
               <NumberInput
                 placeholder="Amount"
-                value={value}
                 onChange={(e) => {
                   setValue(Number(e));
                 }}
