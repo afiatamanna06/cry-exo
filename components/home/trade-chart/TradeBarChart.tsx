@@ -145,29 +145,6 @@ const TradeBarChart = () => {
     },
   ];
 
-  const orderTrendsData = [
-    {
-      title: "Resolved",
-      data: "449",
-    },
-    {
-      title: "Received",
-      data: "426",
-    },
-    {
-      title: "Average first response time",
-      data: "33m",
-    },
-    {
-      title: "Average response time",
-      data: "3h 8m",
-    },
-    {
-      title: "Resolution within SLA",
-      data: "94%",
-    },
-  ];
-
   const width = useBreakpointValue({
     base: 350,
     md: 700,
@@ -206,6 +183,18 @@ const TradeBarChart = () => {
               stopOpacity={0.15}
             />
           </linearGradient>
+          <linearGradient id="colorMv" x1="1" y1="0" x2="0" y2="0">
+            <stop
+              offset="5%"
+              stopColor="rgba(33, 68, 84, 1)"
+              stopOpacity={0.15}
+            />
+            <stop
+              offset="95%"
+              stopColor="rgba(33, 68, 84, 1)"
+              stopOpacity={0}
+            />
+          </linearGradient>
         </defs>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
@@ -218,13 +207,12 @@ const TradeBarChart = () => {
           stroke="rgba(0, 233, 223, 1)"
           fillOpacity={1}
           fill="url(#colorUv)"
-          activeDot={{ r: 1 }}
         />
         <Area
           type="monotone"
           dataKey="Yesterday"
           fillOpacity={1}
-          fill="transparent"
+          fill="url(#colorMv)"
           stroke="rgba(33, 68, 84, 1)"
         />
       </AreaChart>
