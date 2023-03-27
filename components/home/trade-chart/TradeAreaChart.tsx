@@ -1,18 +1,15 @@
 import { Box, useBreakpointValue } from "@chakra-ui/react";
-import React from "react";
 import {
-  BarChart,
-  Bar,
-  Cell,
+  AreaChart,
+  Area,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
   Legend,
-  ResponsiveContainer,
 } from "recharts";
 
-const TradeBarChart = () => {
+const TradeAreaChart = () => {
   const data = [
     {
       name: "0",
@@ -134,6 +131,18 @@ const TradeBarChart = () => {
       Today: 38,
       amt: 140,
     },
+    {
+      name: "20",
+      amt: 147,
+    },
+    {
+      name: "21",
+      amt: 154,
+    },
+    {
+      name: "22",
+      amt: 161,
+    },
   ];
 
   const width = useBreakpointValue({
@@ -150,7 +159,7 @@ const TradeBarChart = () => {
 
   return (
     <Box>
-      <BarChart
+      <AreaChart
         width={width}
         height={height}
         data={data}
@@ -161,16 +170,54 @@ const TradeBarChart = () => {
           bottom: 5,
         }}
       >
+        <defs>
+          <linearGradient id="colorUv" x1="1" y1="0" x2="0" y2="0">
+            <stop
+              offset="5%"
+              stopColor="rgba(0, 233, 223, 1)"
+              stopOpacity={0}
+            />
+            <stop
+              offset="95%"
+              stopColor="rgba(0, 233, 223, 1)"
+              stopOpacity={0.15}
+            />
+          </linearGradient>
+          <linearGradient id="colorMv" x1="1" y1="0" x2="0" y2="0">
+            <stop
+              offset="5%"
+              stopColor="rgba(33, 68, 84, 1)"
+              stopOpacity={0.15}
+            />
+            <stop
+              offset="95%"
+              stopColor="rgba(33, 68, 84, 1)"
+              stopOpacity={0}
+            />
+          </linearGradient>
+        </defs>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
-        <YAxis />
+        <YAxis dataKey="Today" />
         <Tooltip />
-        <Legend />
-        <Bar dataKey="Today" fill="rgba(0, 233, 223, 1)" />
-        <Bar dataKey="Yesterday" fill="rgba(33, 68, 84, 1)" />
-      </BarChart>
+        <Legend wrapperStyle={{ lineHeight: "40px" }} />
+        <Area
+          type="monotone"
+          dataKey="Today"
+          stroke="rgba(0, 233, 223, 1)"
+          fillOpacity={1}
+          fill="url(#colorUv)"
+        />
+        <Area
+          type="monotone"
+          dataKey="Yesterday"
+          fillOpacity={1}
+          fill="url(#colorMv)"
+          stroke="rgba(33, 68, 84, 1)"
+        />
+      </AreaChart>
     </Box>
   );
 };
 
-export default TradeBarChart;
+export default TradeAreaChart;

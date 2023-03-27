@@ -1,4 +1,5 @@
 import { Box, Center, Flex, useDisclosure } from "@chakra-ui/react";
+import TradeAreaChart from "./TradeAreaChart";
 import TradeBarChart from "./TradeBarChart";
 
 const TradeChartSection = () => {
@@ -23,6 +24,7 @@ const TradeChartSection = () => {
           >
             Trade Chart
           </Box>
+          <TradeAreaChart />
           <TradeBarChart />
         </Box>
       </Center>
