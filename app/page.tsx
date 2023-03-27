@@ -1,6 +1,7 @@
 "use client";
 
 import DepositSection from "@/components/home/deposit-section/DepositSection";
+import TradeChartSection from "@/components/home/trade-chart/TradeChartSection";
 import TransactionTableSection from "@/components/home/transaction-section/TransactionTableSection";
 import NavigationBar from "@/components/navigation/NavigationBar";
 import { CacheProvider } from "@chakra-ui/next-js";
@@ -18,6 +19,7 @@ export default function Home() {
               <NavigationBar />
               <TransactionTableSection />
               <DepositSection />
+              <TradeChartSection />
             </Box>
           </WagmiConfig>
         </ChakraProvider>
