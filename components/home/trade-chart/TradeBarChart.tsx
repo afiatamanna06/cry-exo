@@ -3,7 +3,7 @@ import { ApexOptions } from "apexcharts";
 import ReactApexChart from "react-apexcharts";
 import Chart from "react-apexcharts";
 
-const TradeLineChart = () => {
+const TradeBarChart = () => {
   const chartData: ApexOptions = {
     chart: {
       type: "line",
@@ -73,4 +73,4 @@ const TradeLineChart = () => {
   );
 };
 
-export default TradeLineChart;
+export default TradeBarChart;
