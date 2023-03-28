@@ -131,18 +131,6 @@ const TradeAreaChart = () => {
       Today: 38,
       amt: 140,
     },
-    {
-      name: "20",
-      amt: 147,
-    },
-    {
-      name: "21",
-      amt: 154,
-    },
-    {
-      name: "22",
-      amt: 161,
-    },
   ];
 
   const width = useBreakpointValue({
