@@ -145,7 +145,7 @@ const TradeBarChart = () => {
         margin={{
           top: 5,
           right: 5,
-          left: -5,
+          left: -8,
           bottom: 5,
         }}
       >

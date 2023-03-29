@@ -65,10 +65,10 @@ const TradeChartSection = () => {
               </Tab>
             </TabList>
             <TabPanels border="1px" borderColor="rgba(168, 162, 158, 1)">
-              <TabPanel>
+              <TabPanel padding="3">
                 <TradeAreaChart />
               </TabPanel>
-              <TabPanel>
+              <TabPanel padding="3">
                 <TradeBarChart />
               </TabPanel>
             </TabPanels>
