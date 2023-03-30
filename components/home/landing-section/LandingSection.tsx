@@ -5,7 +5,7 @@ import Carousel from "nuka-carousel";
 
 const carouselData = [
   "https://source.unsplash.com/collection/2340700/2400x1709",
-  "https://source.unsplash.com/collection/2340700/2400x1709",
+  "https://source.unsplash.com/collection/10608519/2400x1709",
 ];
 
 const LandingSection = () => {
@@ -46,6 +46,7 @@ const LandingSection = () => {
               {carouselData.map((item) => (
                 <Image
                   src={item}
+                  borderRadius={[0, 0, "5px"]}
                   w={["100%", "100%", "45rem", "50rem"]}
                   h={["20rem", "20rem", "24rem", "28rem"]}
                   alt=""

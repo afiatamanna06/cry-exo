@@ -21,7 +21,7 @@ const TradeChartSection = () => {
       direction="column"
       fontFamily="'Catamaran', sans-serif"
       px={[4]}
-      pb={[8, 8, 20, 20]}
+      pb={[20, 20]}
       pt={[4, 4, 12, 12]}
     >
       <Center>

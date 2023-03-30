@@ -1,6 +1,7 @@
 "use client";
 
 import DepositSection from "@/components/home/deposit-section/DepositSection";
+import Footer from "@/components/home/footer/Footer";
 import LandingSection from "@/components/home/landing-section/LandingSection";
 import TradeChartSection from "@/components/home/trade-chart/TradeChartSection";
 import TransactionTableSection from "@/components/home/transaction-section/TransactionTableSection";
@@ -22,6 +23,7 @@ export default function Home() {
               <DepositSection />
               <TransactionTableSection />
               <TradeChartSection />
+              <Footer />
             </Box>
           </WagmiConfig>
         </ChakraProvider>
