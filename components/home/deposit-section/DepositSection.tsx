@@ -20,7 +20,7 @@ function DepositSection() {
           direction={["column", "column", "row", "row", "row"]}
           border="1px"
           borderColor="rgba(168, 162, 158, 1)"
-          minW={["21rem", "21rem", "45rem", "60rem", "80rem"]}
+          minW={["21rem", "21rem", "45rem", "60rem", "70rem"]}
           gap={[8]}
           p="10"
           alignItems="center"

@@ -17,8 +17,8 @@ export default function Home() {
           <WagmiConfig client={client}>
             <Box bg="rgba(205, 191, 178, .1)" overflow="hidden" minH="100vh">
               <NavigationBar />
-              <TransactionTableSection />
               <DepositSection />
+              <TransactionTableSection />
               <TradeChartSection />
             </Box>
           </WagmiConfig>

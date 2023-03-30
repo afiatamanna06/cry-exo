@@ -1,5 +1,7 @@
+import CommonButton from "@/components/common/CommonButton";
 import {
   Box,
+  Flex,
   Table,
   TableCaption,
   TableContainer,
@@ -13,7 +15,7 @@ import { transactionTableDummyData } from "./TransactionTableData";
 
 function TransactionTable() {
   return (
-    <TableContainer w={["21rem", "21rem", "45rem", "60rem", "80rem"]} overflowX="scroll">
+    <TableContainer w={["21rem", "21rem", "45rem", "60rem", "70rem"]} overflowX="auto">
       <Table
         variant="unstyled"
         size={["sm", "sm", "sm", "md"]}
@@ -27,19 +29,21 @@ function TransactionTable() {
           color="white"
         >
           <Tr>
-            <Td>Date</Td>
-            <Td>Description</Td>
-            <Td>Amount</Td>
-            <Td>Currency Type</Td>
-            <Td>Transaction type</Td>
+            <Td>Currency</Td>
+            <Td>Price</Td>
+            <Td>24h Change</Td>
+            <Td></Td>
           </Tr>
         </Thead>
         <Tbody>
-          {transactionTableDummyData.map(({ date, description, amount, currencyType, transactionType }) => (
-              <Tr key={date} cursor="pointer" fontSize="sm" fontWeight="medium" _hover={{ bg: "white" }}>
-                <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">{date}</Td>
-                <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">{description}</Td>
-                <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">{amount}</Td>
+          {transactionTableDummyData.map(({ name, description, price, change }) => (
+              <Tr key={name} cursor="pointer" fontSize="sm" fontWeight="medium" _hover={{ bg: "white" }}>
+                <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">
+                  <Flex gap={1}>
+                    <Box fontWeight={"semibold"}>{name}</Box>
+                    <Box color="gray.400">{description}</Box>
+                  </Flex>
+                </Td>
                 <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">
                   <Box
                     color="rgba(0, 233, 223, 1)"
@@ -47,9 +51,10 @@ function TransactionTable() {
                     px="2"
                     borderRadius="md"
                     w="min-content"
-                    bg="rgba(0, 233, 223, .075)"
+                    fontWeight={"semibold"}
+                    bg="rgba(0, 233, 223, .05)"
                   >
-                    {currencyType}
+                    {price}
                   </Box>
                 </Td>
                 <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">
@@ -61,8 +66,11 @@ function TransactionTable() {
                     w="min-content"
                     bg="rgba(33, 68, 84, .075)"
                   >
-                    {transactionType}
+                    {change}
                   </Box>
+                </Td>
+                <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">
+                  <CommonButton name="Trade" width={["100%"]} bg="rgba(33, 68, 84, 1)" />
                 </Td>
               </Tr>
             ))}
