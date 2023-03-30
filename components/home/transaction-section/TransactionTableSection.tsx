@@ -17,7 +17,7 @@ function TransactionTableSection() {
       direction="column"
       fontFamily="'Catamaran', sans-serif"
       px={[4]}
-      pb={[8, 8, 12, 12]}
+      pb={[14, 14, 12, 12]}
     >
       <Center>
         <Box w="100%">
