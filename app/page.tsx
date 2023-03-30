@@ -1,6 +1,7 @@
 "use client";
 
 import DepositSection from "@/components/home/deposit-section/DepositSection";
+import LandingSection from "@/components/home/landing-section/LandingSection";
 import TradeChartSection from "@/components/home/trade-chart/TradeChartSection";
 import TransactionTableSection from "@/components/home/transaction-section/TransactionTableSection";
 import NavigationBar from "@/components/navigation/NavigationBar";
@@ -17,6 +18,7 @@ export default function Home() {
           <WagmiConfig client={client}>
             <Box bg="rgba(205, 191, 178, .1)" overflow="hidden" minH="100vh">
               <NavigationBar />
+              <LandingSection />
               <DepositSection />
               <TransactionTableSection />
               <TradeChartSection />
