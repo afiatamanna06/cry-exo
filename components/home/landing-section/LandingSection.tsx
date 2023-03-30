@@ -15,7 +15,7 @@ const LandingSection = () => {
       alignItems="center"
       justify="center"
       w={["full"]}
-      minH="100vh"
+      minH="90vh"
       direction="column"
       fontFamily="'Catamaran', sans-serif"
     >
