@@ -125,9 +125,9 @@ const TradeBarChart = () => {
   ];
 
   const width = useBreakpointValue({
-    base: 350,
+    base: 320,
     md: 700,
-    lg: 1250,
+    lg: 1090,
   });
 
   const height = useBreakpointValue({

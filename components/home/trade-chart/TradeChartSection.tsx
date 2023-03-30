@@ -30,8 +30,7 @@ const TradeChartSection = () => {
             fontSize={["3xl"]}
             fontWeight="semibold"
             w="full"
-            mb="2"
-            px={[4, 4, 0, 0]}
+            mb="-8"
             fontFamily="'Catamaran', sans-serif"
           >
             Trade Chart

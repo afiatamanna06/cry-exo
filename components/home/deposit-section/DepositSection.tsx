@@ -12,8 +12,7 @@ function DepositSection() {
       w={["full"]}
       direction="column"
       fontFamily="'Catamaran', sans-serif"
-      mb="8"
-      mt={[4, 4, 0, 0]}
+      py={[8, 8, 20, 20]}
     >
       <Center>
         <Flex
