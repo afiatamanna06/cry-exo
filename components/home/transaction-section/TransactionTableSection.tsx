@@ -22,7 +22,7 @@ function TransactionTableSection() {
       <Center>
         <Box w="100%">
           <Box
-            fontSize={["3xl"]}
+            fontSize={["2xl"]}
             fontWeight="semibold"
             w="full"
             mb="2"

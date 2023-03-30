@@ -27,7 +27,7 @@ function DepositSection() {
           justify="space-between"
         >
           <Box
-            fontSize={["3xl"]}
+            fontSize={["2xl"]}
             fontWeight="semibold"
             w="full"
             textAlign={["center", "center", "start", "start"]}
@@ -37,6 +37,7 @@ function DepositSection() {
           </Box>
           <CommonButton
             name="Deposit"
+            width={["14rem"]}
             onClick={onOpen}
             bg="rgba(0, 233, 223, 1)"
           />
