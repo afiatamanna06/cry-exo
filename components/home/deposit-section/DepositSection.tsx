@@ -27,7 +27,7 @@ function DepositSection() {
           justify="space-between"
         >
           <Box
-            fontSize={["2xl"]}
+            fontSize={["3xl"]}
             fontWeight="semibold"
             w="full"
             textAlign={["center", "center", "start", "start"]}

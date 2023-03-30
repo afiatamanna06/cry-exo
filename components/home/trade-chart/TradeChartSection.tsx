@@ -27,7 +27,7 @@ const TradeChartSection = () => {
       <Center>
         <Box w="100%">
           <Box
-            fontSize={["2xl"]}
+            fontSize={["3xl"]}
             fontWeight="semibold"
             w="full"
             mb="-8"
