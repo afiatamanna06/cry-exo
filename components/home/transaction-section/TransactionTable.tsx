@@ -15,7 +15,10 @@ import { transactionTableDummyData } from "./TransactionTableData";
 
 function TransactionTable() {
   return (
-    <TableContainer w={["21rem", "21rem", "45rem", "60rem", "70rem"]} overflowX="auto">
+    <TableContainer
+      w={["21rem", "21rem", "45rem", "60rem", "70rem"]}
+      overflowX="auto"
+    >
       <Table
         variant="unstyled"
         size={["sm", "sm", "sm", "md"]}
@@ -36,8 +39,15 @@ function TransactionTable() {
           </Tr>
         </Thead>
         <Tbody>
-          {transactionTableDummyData.map(({ name, description, price, change }) => (
-              <Tr key={name} cursor="pointer" fontSize="sm" fontWeight="medium" _hover={{ bg: "white" }}>
+          {transactionTableDummyData.map(
+            ({ name, description, price, change }) => (
+              <Tr
+                key={name}
+                cursor="pointer"
+                fontSize="sm"
+                fontWeight="medium"
+                _hover={{ bg: "white" }}
+              >
                 <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">
                   <Flex gap={1}>
                     <Box fontWeight={"semibold"}>{name}</Box>
@@ -70,10 +80,15 @@ function TransactionTable() {
                   </Box>
                 </Td>
                 <Td borderTop="1px" borderColor="rgba(168, 162, 158, 1)">
-                  <CommonButton name="Trade" width={["100%"]} bg="rgba(33, 68, 84, 1)" />
+                  <CommonButton
+                    name="Trade"
+                    width={["100%"]}
+                    bg="rgba(33, 68, 84, 1)"
+                  />
                 </Td>
               </Tr>
-            ))}
+            )
+          )}
         </Tbody>
       </Table>
     </TableContainer>

@@ -1,16 +1,24 @@
 import { Button, Image } from "@chakra-ui/react";
 
 interface propTypes {
-    name: string;
-    width?: string[],
-    onClick?: any;
-    bg?: string;
-    bgGradient?: string;
-    image?: string;
-    hoverBg?: string;
+  name: string;
+  width?: string[];
+  onClick?: any;
+  bg?: string;
+  bgGradient?: string;
+  image?: string;
+  hoverBg?: string;
 }
 
-function CommonButton({ name, onClick, bg, bgGradient, hoverBg, image, width }: propTypes) {
+function CommonButton({
+  name,
+  onClick,
+  bg,
+  bgGradient,
+  hoverBg,
+  image,
+  width,
+}: propTypes) {
   return (
     <Button
       fontFamily="'Catamaran', sans-serif"
@@ -33,7 +41,7 @@ function CommonButton({ name, onClick, bg, bgGradient, hoverBg, image, width }: 
       }}
       onClick={onClick}
     >
-      {image && (<Image h="1.5rem" w="2.5rem" src={image} alt="" />)}
+      {image && <Image h="1.5rem" w="2.5rem" src={image} alt="" />}
       {name}
     </Button>
   );

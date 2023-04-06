@@ -1,5 +1,5 @@
 import { configureChains, createClient } from "wagmi";
-import { mainnet, polygon, optimism } from '@wagmi/core/chains'
+import { mainnet, polygon, optimism } from "@wagmi/core/chains";
 import { publicProvider } from "@wagmi/core/providers/public";
 import { CoinbaseWalletConnector } from "wagmi/connectors/coinbaseWallet";
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
@@ -7,9 +7,7 @@ import { WalletConnectConnector } from "wagmi/connectors/walletConnect";
 import { InjectedConnector } from "wagmi/connectors/injected";
 
 export const { chains, provider, webSocketProvider } = configureChains(
-  [
-    mainnet, polygon, optimism
-  ],
+  [mainnet, polygon, optimism],
   [publicProvider()]
 );
 
@@ -20,20 +18,20 @@ export const client = createClient({
     new CoinbaseWalletConnector({
       chains,
       options: {
-        appName: 'wagmi',
+        appName: "wagmi",
       },
     }),
     new WalletConnectConnector({
       chains,
       options: {
-        projectId: 'walletConnect',
+        projectId: "walletConnect",
         showQrModal: true,
       },
     }),
     new InjectedConnector({
       chains,
       options: {
-        name: 'Injected',
+        name: "Injected",
         shimDisconnect: true,
       },
     }),

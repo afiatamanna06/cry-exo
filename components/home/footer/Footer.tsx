@@ -94,13 +94,25 @@ export default function Footer() {
         >
           <Text>© 2023 CryExo Global</Text>
           <Stack direction={"row"} spacing={6}>
-            <SocialButton label={"Twitter"} href={"https://twitter.com/home"} hover="rgba(0, 233, 223, 1)">
+            <SocialButton
+              label={"Twitter"}
+              href={"https://twitter.com/home"}
+              hover="rgba(0, 233, 223, 1)"
+            >
               <FaTwitter />
             </SocialButton>
-            <SocialButton label={"YouTube"} href={"https://www.youtube.com/"} hover="rgba(0, 233, 223, 1)">
+            <SocialButton
+              label={"YouTube"}
+              href={"https://www.youtube.com/"}
+              hover="rgba(0, 233, 223, 1)"
+            >
               <FaYoutube />
             </SocialButton>
-            <SocialButton label={"Instagram"} href={"https://www.instagram.com/"} hover="rgba(0, 233, 223, 1)">
+            <SocialButton
+              label={"Instagram"}
+              href={"https://www.instagram.com/"}
+              hover="rgba(0, 233, 223, 1)"
+            >
               <FaInstagram />
             </SocialButton>
           </Stack>

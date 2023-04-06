@@ -1,9 +1,4 @@
-import {
-  Box,
-  Center,
-  Flex,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Box, Center, Flex, useDisclosure } from "@chakra-ui/react";
 import TransactionTable from "./TransactionTable";
 
 function TransactionTableSection() {

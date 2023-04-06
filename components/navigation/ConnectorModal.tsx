@@ -11,7 +11,7 @@ import {
   ModalOverlay,
 } from "@chakra-ui/react";
 import { useConnect } from "wagmi";
-import { chains } from "../../utils/wagmiConfig"
+import { chains } from "../../utils/wagmiConfig";
 
 interface modalProps {
   isModalOpen: boolean;
@@ -36,7 +36,7 @@ const images = [
 function ConnectorModal({ isModalOpen, onModalClose }: modalProps) {
   const { connect, connectors, error, isLoading, pendingConnector, isSuccess } =
     useConnect();
-  console.log(chains)
+  console.log(chains);
 
   return (
     <Modal isOpen={isModalOpen} onClose={onModalClose} isCentered>
